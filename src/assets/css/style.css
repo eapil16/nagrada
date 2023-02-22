@@ -413,6 +413,7 @@ a:hover {
   background: #F6F8FB;
   border-radius: 6px;
   position: relative;
+  cursor: pointer;
 }
 
 .button-basket:hover {
@@ -436,6 +437,12 @@ a:hover {
   opacity: 1;
 }
 
+.button-basket.active .basket-info__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .button-basket .basket-info {
   position: absolute;
   top: 8px;
@@ -454,6 +461,7 @@ a:hover {
   opacity: 0;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
+  cursor: pointer;
 }
 
 .button-basket .basket-info__input {
@@ -468,6 +476,7 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  display: none;
 }
 
 .button-basket .basket-info__input input {
@@ -1847,6 +1856,7 @@ h2 {
 
 .sidebar-button {
   display: none;
+  cursor: pointer;
 }
 
 .breadcrumb {
@@ -4103,6 +4113,7 @@ textarea.form-input {
   padding: 24px 16px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
 .search-result-form .item {
@@ -4216,6 +4227,95 @@ textarea.form-input {
   margin: 0 0 24px 0;
   font-weight: 400;
   color: #000;
+}
+
+.modal-content {
+  padding: 30px 15px;
+  background: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content .btn-close {
+  position: absolute;
+  top: 15px;
+  right: 13px;
+}
+
+.modal-header {
+  padding: 0;
+  border: 0;
+  margin: 0 0 25px 0;
+}
+
+.modal-header .modal-title {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-close:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-body p.info {
+  margin: 16px 0 24px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  font-weight: 400;
+}
+
+.modal-body p.info a {
+  color: #2655D8;
+  text-decoration: underline;
+}
+
+.modal-body p.info a:hover {
+  color: #2655D8;
+  text-decoration: none;
+}
+
+.modal-body__success {
+  text-align: center;
+}
+
+.modal-body__success img {
+  display: inline-block;
+  width: 100%;
+  max-width: 86px;
+}
+
+.modal-body__success p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #71809A;
+  margin: 16px 0 0 0;
+  text-align: center;
+}
+
+.modal-body__success p.title {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  font-weight: bold;
+  margin: 30px auto 0;
+  max-width: 300px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 360px;
+  }
 }
 
 @media screen and (min-width: 1200px) {

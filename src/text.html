@@ -16,8 +16,8 @@
       <header class="header"> 
         <div class="container">
           <div class="header-block__top">
-            <div class="header-block__top_letter"><a class="mail" href="mailto:nagrada@mail.ru">nagrada@mail.ru </a></div>
-            <div class="header-block__top_actions"> <a class="btn button button-lightblue" href="#">Заказать звонок</a>
+            <div class="header-block__top_letter"><a class="mail" href="mailto:nagrada@mail.ru" data-bs-toggle="modal" data-bs-target="#successModal">nagrada@mail.ru </a></div>
+            <div class="header-block__top_actions"> <a class="btn button button-lightblue" href="#" data-bs-toggle="modal" data-bs-target="#callbackModal">Заказать звонок</a>
               <ul class="social">
                 <li> <a href="#"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
@@ -300,6 +300,41 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10">
           <path id="Path_293" data-name="Path 293" d="M7739,9.008l.006-.007L7739,8.993,7743.8,4l1.2,1.257L7741.416,9,7745,12.744,7743.8,14Z" transform="translate(-7739 -4)" fill="#2655d8"></path>
         </svg>
+      </div>
+      <div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Заказать звонок</h5>
+              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+              <div class="form-item">
+                <input class="form-input" type="text" required="">
+                <label class="form-label">Укажите ФИО *</label>
+              </div>
+              <div class="form-item">
+                <input class="form-input phone" type="text" required="">
+                <label class="form-label">Номер телефона *</label>
+              </div>
+              <p class="info">Отправляя заявку на звонок, я соглашаюсь на <a href="#">обработку персональных данных</a></p>
+              <button class="btn button button-blue" type="submit">Заказать звонок</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            <div class="modal-body">
+              <div class="modal-body__success"><img src="assets/images/successful.svg" alt="">
+                <p class="title">Спасибо! Ваша заявка принята нашим менеджером</p>
+                <p>В ближайшее время мы свяжемся с вами.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="cookie-block">
         <p>Продолжая использовать сайт, вы даете согласие на обработку файлов cookie.</p><a class="btn button button-blue" href="#">Подтверждаю</a>
