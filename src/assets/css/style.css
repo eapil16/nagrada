@@ -2048,6 +2048,10 @@ h2 {
   width: 100%;
 }
 
+.pagination-block .button:hover {
+  background: #2655D8;
+}
+
 .pagination .page-item {
   margin: 0 3px;
 }
@@ -3371,14 +3375,13 @@ textarea.form-input {
 .chekbox {
   max-width: 100%;
   width: auto;
-  margin: 0px 15px 8px;
-  overflow: hidden;
+  margin: 0px 15px 15px;
   border-top: 1px solid #E3E8EF;
   padding: 0;
 }
 
 .chekbox p {
-  margin: 8px 0;
+  margin: 8px -8px;
 }
 
 .chekbox input[type="checkbox"] {
@@ -3387,20 +3390,30 @@ textarea.form-input {
 }
 
 .chekbox input[type="checkbox"] + label {
-  padding: 7px 0px 0px 30px;
+  padding: 7px 5px 7px 32px;
   cursor: pointer;
+  border-radius: 4px;
   font-weight: normal;
   font-size: 15px;
   line-height: 15px;
   color: #000;
   position: relative;
+  display: block;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.chekbox input[type="checkbox"] + label:hover {
+  background: #F6F8FB;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .chekbox input[type="checkbox"] + label:before {
   content: '';
   position: absolute;
   top: 5px;
-  left: 0;
+  left: 7px;
   width: 19px;
   height: 19px;
   background: #fff;
@@ -3412,7 +3425,7 @@ textarea.form-input {
 .chekbox input[type="checkbox"]:checked + label:after {
   content: '';
   top: 10px;
-  left: 5px;
+  left: 12px;
   width: 10px;
   height: 6px;
   border-top: 2px solid #000;
@@ -3672,12 +3685,7 @@ textarea.form-input {
   text-align: center;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
-}
-
-.mySwiper2 .swiper-slide-active {
-  border-color: #2655D8;
-  -webkit-transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out;
+  cursor: pointer;
 }
 
 .mySwiper2 .swiper-slide img {
@@ -3690,6 +3698,12 @@ textarea.form-input {
   display: inline-block;
   -o-object-position: center;
      object-position: center;
+}
+
+.mySwiper2 .swiper-slide-thumb-active {
+  border-color: #2655D8;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .mySwiper {

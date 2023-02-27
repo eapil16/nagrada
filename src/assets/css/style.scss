@@ -1650,6 +1650,9 @@ h2 {
     margin: 25px 0 0;
     .button {
       width: 100%;
+      &:hover {
+        background: #2655D8;
+      }
     }
   }
   .page-item {
@@ -2757,32 +2760,38 @@ textarea.form-input {
 .chekbox {
   max-width: 100%;
   width: auto;
-  margin:0px 15px 8px;
-  overflow: hidden;
+  margin:0px 15px 15px;
   border-top: 1px solid #E3E8EF;
   padding: 0;
 }
 .chekbox p {
-  margin: 8px 0;
+  margin: 8px -8px;
 }
 .chekbox input[type="checkbox"] {
   position: absolute;
   left: -9999px;
 }
 .chekbox input[type="checkbox"] + label {
-  padding: 7px 0px 0px 30px;
+  padding: 7px 5px 7px 32px;
   cursor: pointer;
+  border-radius: 4px;
   font-weight: normal;
   font-size: 15px;
   line-height: 15px;
   color: #000;
   position: relative;
+  display: block;
+  transition: all 400ms ease-in-out;
+  &:hover {
+    background: #F6F8FB;
+    transition: all 400ms ease-in-out;
+  }
 }
 .chekbox input[type="checkbox"] + label:before {
   content: '';
   position: absolute;
   top: 5px;
-  left: 0;
+  left: 7px;
   width: 19px;
   height:19px;
   background: #fff;
@@ -2793,7 +2802,7 @@ textarea.form-input {
 .chekbox input[type="checkbox"]:checked + label:after {
   content: '';
   top: 10px;
-  left: 5px;
+  left: 12px;
   width: 10px;
   height: 6px;
   border-top: 2px solid #000;
@@ -3008,10 +3017,7 @@ textarea.form-input {
     border: 1px solid #E3E8EF;
     text-align: center;
     transition: all 400ms ease-in-out;
-    &-active {
-      border-color: #2655D8;
-      transition: all 400ms ease-in-out;
-    }
+    cursor: pointer;
     img {
       width: auto;
       height: auto;
@@ -3021,6 +3027,10 @@ textarea.form-input {
       display: inline-block;
       object-position: center;
     }
+  }
+  .swiper-slide-thumb-active {
+    border-color: #2655D8;
+    transition: all 400ms ease-in-out;
   }
 }
 

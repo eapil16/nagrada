@@ -47,8 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
      
       const targetBlock = e.target.closest('.left-menu__item').querySelector('.left-menu__dropdown');
       if (targetBlock) {
-        targetBlock.classList.add('show');
-        e.target.classList.add('selected');
+        targetBlock.classList.toggle('show');
+        e.target.classList.toggle('selected');
+
+        // console.log(e.target)
+        
+       
+        // if (e.target.classList.contains('selected')) {
+        //   console.log(e.target.classList.contains('selected'))
+        //   e.target.classList.toggle('selected');
+        //   console.log(e.target.classList.contains('selected'))
+        // }
+        
+       
       }
     }
     if (!e.target.closest('.left-menu__link_sub') && !e.target.closest('.left-menu__dropdown')) {
@@ -394,19 +405,9 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.filter-content').slideToggle(); 
   });
 
-  const swiper5 = new Swiper(".mySwiper", {
-    loop: true,
-    spaceBetween: 0,
-    slidesPerView: 1,
-    freeMode: true,
-    watchSlidesProgress: true,
-    allowTouchMove: false,
-  });
-
   const swiper6 = new Swiper(".mySwiper2", {
-    loop: true,
+    loop: false,
     spaceBetween: 7,
-    allowTouchMove: true,
     slidesPerView: 2,
     freeMode: true,
     watchSlidesProgress: true,
@@ -414,15 +415,21 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: ".basket-next",
       prevEl: ".basket-prev",
     },
-    thumbs: {
-      swiper: swiper5,
-      clickable: true,
-    },
     breakpoints: {
       576: {
         slidesPerView: 4,
       }
     }
+  });
+
+  const swiper5 = new Swiper(".mySwiper", {
+    spaceBetween: 0,
+    slidesPerView: 1,
+    loop: false,
+    thumbs: {
+      swiper: swiper6,
+      clickable: true,
+    },
   });
 
   $(".basket-page__content_about").on("click", function (event) {
