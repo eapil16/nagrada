@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelector('body').addEventListener('click', e => {
+	  
     if (e.target.closest('.main-menu__link')) {
       e.preventDefault();
 
@@ -41,27 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       
       const collLinks = document.querySelectorAll('.left-menu__link_sub');
-      collLinks.forEach(element => element.classList.remove('selected'));
+      // collLinks.forEach(element => element.classList.remove('selected'));
       const collBlocks = document.querySelectorAll('.left-menu__dropdown');
-      collBlocks.forEach(element => element.classList.remove('show'));
+      //collBlocks.forEach(element => element.classList.remove('show'));
      
       const targetBlock = e.target.closest('.left-menu__item').querySelector('.left-menu__dropdown');
       if (targetBlock) {
         targetBlock.classList.toggle('show');
         e.target.classList.toggle('selected');
-
-        // console.log(e.target)
-        
-       
-        // if (e.target.classList.contains('selected')) {
-        //   console.log(e.target.classList.contains('selected'))
-        //   e.target.classList.toggle('selected');
-        //   console.log(e.target.classList.contains('selected'))
-        // }
-        
-       
+		    collBlocks.forEach(element => {if(element!=targetBlock) element.classList.remove('show')});
+        collLinks.forEach(element =>  {if(element!=e.target) element.classList.remove('selected')})      
       }
     }
+	
     if (!e.target.closest('.left-menu__link_sub') && !e.target.closest('.left-menu__dropdown')) {
       const collLinks = document.querySelectorAll('.left-menu__link_sub');
       collLinks.forEach(element => element.classList.remove('selected'));
